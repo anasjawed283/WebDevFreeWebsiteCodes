@@ -1,0 +1,105 @@
+@import "https://unpkg.com/open-props"
+
+// color
+$black: hsl(0, 0%, 0%)
+
+$url: url(https://images.pexels.com/photos/1172207/pexels-photo-1172207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+
+button
+  
+  font: inherit
+
+.page
+  
+  // color
+  color: var(--gray-0)
+  background:
+    image: $url
+    size: cover
+    repeat: no-repeat
+    position: center
+    color: var(--gray-0)
+    
+  // grid
+  display: grid
+  grid:
+    template:
+      areas: "main"
+    
+  // size
+  min:
+    height: 100vh
+    
+  // typography
+  font:
+    family: var(--font-sans)
+    
+  &__main
+    
+    // grid
+    grid:
+      area: main
+      
+.main
+  
+  // grid
+  display: grid
+  
+  place:
+    content: center
+    
+.hero
+  
+  // typography
+  text:
+    align: center
+    
+  &__content
+    
+    // position
+    margin:
+      bottom: var(--size-6)
+    
+  &__title
+    
+    // position
+    margin:
+      bottom: var(--size-8)
+    
+    // typography
+    font:
+      weight: var(--font-weight-6)
+      size: var(--font-size-fluid-3)
+    
+  &__desc
+    
+    // typography
+    font:
+      size: var(--font-size-fluid-1)
+    
+    line:
+      height: var(--font-lineheight-3)
+      
+.primary-btn
+  
+  // color
+  color: $black
+  background:
+    color: hsl(100deg 4% 83%)
+  
+  // size
+  padding: 0.7em 1.4em
+  border: 0
+  
+  // states
+  cursor: pointer
+  
+  // typography
+  font:
+    size: var(--font-size-2)
+    
+  &:hover
+  
+    color: var(--gray-0)
+    background:
+      color: $black
