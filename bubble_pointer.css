@@ -1,0 +1,198 @@
+html {
+  background: #222831;
+  color: #eee;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23eee' r='4'/%3E%3C/svg%3E") 3 3, auto;
+}
+
+.stroke-only {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: 600ms transform cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.transform-center-center {
+  transform-origin: center center;
+}
+a.link:hover .stroke-only {
+  stroke: #b55400;
+}
+a.link:hover .move-up {
+  transform: translateY(-16px);
+}
+a.link:hover .move-right {
+  transform: translateX(10px);
+}
+a.link:hover .move-down {
+  transform: translateY(16px);
+}
+a.link:hover .move-left {
+  transform: translateX(-10px);
+}
+a.link:hover .move-up-little {
+  transform: translateY(-4px);
+}
+a.link:hover .move-up-medium {
+  transform: translateY(-6px);
+}
+.svg-search {
+  transform-origin: 26px 26px;
+}
+a.link:hover .turn-90 {
+  transform: rotate(90deg);
+}
+a.link:hover .turn-15 {
+  transform: rotate(15deg);
+}
+
+.container {
+  position: relative;
+  max-width: auto;
+  margin: auto;
+  margin-top: 4rem;
+  padding: 1rem;
+  border: 1px solid #393e46;
+  border-radius: 0.25rem;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.close, .min, .max {
+  position: absolute;
+  top: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #393e46;
+  border-radius: 50%;
+}
+.close {
+  left: 1rem;
+  background-color: #b55400;
+}
+.min {
+  left: 2.5rem;
+}
+.max {
+  left: 4rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-top: 1.75rem;
+  padding: 0.125rem 0;
+}
+
+.margin-left-auto {
+  margin-left: auto;
+}
+
+.content {
+  padding: 1rem;
+}
+.content h1 {
+  line-height: 1;
+  margin-top: 0;
+}
+.content p {
+  line-height: 2;
+}
+
+.cursor {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--width);
+  height: var(--height);
+  transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
+  /* transition-duration: 125ms;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition-property: width, height, transform; */
+  transition: 150ms width cubic-bezier(0.39, 0.575, 0.565, 1),
+              150ms height cubic-bezier(0.39, 0.575, 0.565, 1),
+              150ms transform cubic-bezier(0.39, 0.575, 0.565, 1);
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+}
+@media (pointer: fine) {
+  .cursor {
+    display: block;
+  }
+}
+.cursor::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius);
+  border: 2px solid #b55400;
+  opacity: var(--scale);
+  -webkit-transform: scale(var(--scale));
+          transform: scale(var(--scale));
+  transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
+              300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
+              150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+html:not(html:hover) .cursor::after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: none;
+  border-radius: 50%;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  color: #eee;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  cursor: inherit;
+  margin: -0.125rem -0.375rem;
+  padding: 0.125rem 0.375rem;
+  background: none;
+  border-radius: 0.25rem;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+.btn:hover {
+  text-decoration-line: none;
+}
