@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.bg {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vw;
+  z-index: -1;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #1f363d 0deg,
+    #ffffff 360deg
+  );
+  animation: rotate-gradient 7s linear infinite;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 10%;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #1f363d;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h1 span {
+  color: white;
+}
+
+p {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+@keyframes rotate-gradient {
+  from {
+    transform: rotate(0deg) scale(3);
+  }
+  to {
+    transform: rotate(360deg) scale(3);
+  }
+}
