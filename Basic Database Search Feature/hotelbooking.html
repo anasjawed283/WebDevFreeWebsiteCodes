@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Booking</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 60%;
+      margin: 0 auto;
+    }
+    .hotel-list {
+      list-style-type: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Hotel Booking</h1>
+    <p>Type a command to get started:</p>
+    <input type="text" id="userInput" placeholder="Type here...">
+    <button onclick="processUserInput()">Submit</button>
+    <div id="output"></div>
+    <ul class="hotel-list"></ul>
+  </div>
+
+  <script>
+    // JavaScript code (embedded)
+    const hotels = [
+      {
+        name: "Hotel A",
+        roomsAvailable: 10,
+        pricePerNight: 100,
+      },
+      {
+        name: "Hotel B",
+        roomsAvailable: 5,
+        pricePerNight: 150,
+      },
+      {
+        name: "Hotel C",
+        roomsAvailable: 8,
+        pricePerNight: 120,
+      },
+    ];
+
+    function displayAvailableHotels() {
+      const hotelList = document.querySelector(".hotel-list");
+      hotelList.innerHTML = "";
+      hotels.forEach((hotel, index) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${index + 1}. ${hotel.name} - Price: $${hotel.pricePerNight} per night, Rooms available: ${hotel.roomsAvailable}`;
+        hotelList.appendChild(listItem);
+      });
+    }
+
+    function bookHotel(hotelIndex, numNights) {
+      const selectedHotel = hotels[hotelIndex];
+      if (!selectedHotel) {
+        return "Invalid hotel selection.";
+      }
+
+      if (selectedHotel.roomsAvailable >= numNights) {
+        const totalPrice = selectedHotel.pricePerNight * numNights;
+        selectedHotel.roomsAvailable -= numNights;
+        return `Booking confirmed for ${numNights} nights at ${selectedHotel.name}. Total cost: $${totalPrice}`;
+      } else {
+        return `Sorry, ${selectedHotel.name} does not have enough rooms available for your selected dates.`;
+      }
+    }
+
+    function processUserInput() {
+      const userInput = document.getElementById("userInput").value.toLowerCase();
+
+      let response;
+      if (userInput.includes("list hotels")) {
+        displayAvailableHotels();
+      } else if (userInput.includes("book hotel")) {
+        const match = userInput.match(/book hotel (\d+) for (\d+) nights/);
+        if (match) {
+          const hotelIndex = parseInt(match[1]) - 1;
+          const numNights = parseInt(match[2]);
+          response = bookHotel(hotelIndex, numNights);
+        } else {
+          response = "Invalid booking command. Please use 'book hotel [number] for [number] nights' format.";
+        }
+      } else {
+        response = "I'm sorry, I don't understand that command.";
+      }
+
+      document.getElementById("output").textContent = response;
+    }
+  </script>
+</body>
+</html>

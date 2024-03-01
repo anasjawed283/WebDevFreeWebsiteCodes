@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 20px 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-height: 100%;
+        }
+        .hcontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 100%;
+            background-color: #9ac4a9;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            /* To eliminate spacing between cells */
+            border: 2px solid #333;
+            /* Adds a wide outer border */
+        }
+
+        th,
+        td {
+            border: 2px solid #333;
+            /* Darkens the cell borders */
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Header row style */
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Employee Database</h1>
+        <input type="text" id="search" placeholder="Search by Name">
+    </header>
+    <div class="hcontainer">
+        <h2>Employee Data -- Find and Check</h2>
+    </div>
+    
+    <div class="container">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Phone Number</th>
+            </tr>
+            <tr>
+                <td>Savannah Cummings</td>
+                <td>North Teresamouth</td>
+                <td>390-520-1070x04874</td>
+            </tr>
+
+            <tr>
+                <td>Mr. Robert Santiago DDS</td>
+                <td>Brownview</td>
+                <td>+1-434-807-2085</td>
+            </tr>
+
+            <tr>
+                <td>Ralph Watts</td>
+                <td>Nancyfurt</td>
+                <td>868.236.2105</td>
+            </tr>
+
+            <tr>
+                <td>Richard Sullivan</td>
+                <td>East Michael</td>
+                <td>(581)695-3258x0307</td>
+            </tr>
+
+            <tr>
+                <td>Angelica Stewart</td>
+                <td>New Alexander</td>
+                <td>910-348-5275x39400</td>
+            </tr>
+
+            <tr>
+                <td>Jamie Wallace</td>
+                <td>Stewartton</td>
+                <td>880.690.2027</td>
+            </tr>
+
+            <tr>
+                <td>Derek Carr</td>
+                <td>Amandatown</td>
+                <td>(568)398-2742x399</td>
+            </tr>
+
+            <tr>
+                <td>Stephanie Burton</td>
+                <td>Fleminghaven</td>
+                <td>001-384-719-9977x11889</td>
+            </tr>
+
+            <tr>
+                <td>Brianna Thomas</td>
+                <td>West Christopher</td>
+                <td>+1-890-433-9010x6986</td>
+            </tr>
+
+            <tr>
+                <td>Amy Cole</td>
+                <td>New Gabriel</td>
+                <td>376.859.6965</td>
+            </tr>
+
+            <tr>
+                <td>Natasha Taylor</td>
+                <td>Burtonhaven</td>
+                <td>410-668-9638x49184</td>
+            </tr>
+
+            <tr>
+                <td>Blake Werner</td>
+                <td>Millerborough</td>
+                <td>+1-997-559-4323</td>
+            </tr>
+
+            <tr>
+                <td>Carlos Lewis</td>
+                <td>Port Jenniferton</td>
+                <td>+1-953-561-6125x5854</td>
+            </tr>
+
+            <tr>
+                <td>Kelly Johnston</td>
+                <td>West Susan</td>
+                <td>998-282-9873</td>
+            </tr>
+
+            <tr>
+                <td>John Schroeder</td>
+                <td>East Andrea</td>
+                <td>(908)432-3497x13542</td>
+            </tr>
+
+            <tr>
+                <td>Deborah Barker</td>
+                <td>Michelleview</td>
+                <td>468.714.6142</td>
+            </tr>
+
+            <tr>
+                <td>Andrew James</td>
+                <td>South Jessicafurt</td>
+                <td>(734)993-6862x984</td>
+            </tr>
+
+            <tr>
+                <td>Allen Wilson</td>
+                <td>West Patrickton</td>
+                <td>(390)690-5213x16929</td>
+            </tr>
+
+            <tr>
+                <td>Jennifer Walker</td>
+                <td>Brewerport</td>
+                <td>+1-429-756-7988x62749</td>
+            </tr>
+
+            <tr>
+                <td>Katie Green PhD</td>
+                <td>Harrishaven</td>
+                <td>670.517.1368x226</td>
+            </tr>
+
+            <tr>
+                <td>Julie Baker</td>
+                <td>West Emmamouth</td>
+                <td>758-395-0875x253</td>
+            </tr>
+
+            <tr>
+                <td>Brandon Woods</td>
+                <td>West Andrewmouth</td>
+                <td>607-350-3444</td>
+            </tr>
+
+            <tr>
+                <td>Alyssa Reeves</td>
+                <td>Port Walter</td>
+                <td>970.702.6257</td>
+            </tr>
+
+            <tr>
+                <td>Nicholas Cohen</td>
+                <td>Jeffreyburgh</td>
+                <td>001-537-246-4965x05726</td>
+            </tr>
+
+            <tr>
+                <td>David Greer</td>
+                <td>North Michaelmouth</td>
+                <td>(506)521-2823x49700</td>
+            </tr>
+
+            <tr>
+                <td>Kimberly Graham</td>
+                <td>South Bradley</td>
+                <td>+1-513-331-1344x936</td>
+            </tr>
+
+            <tr>
+                <td>Tristan Taylor</td>
+                <td>South Laurenstad</td>
+                <td>(271)315-5257x0194</td>
+            </tr>
+
+            <tr>
+                <td>Michelle Shaw</td>
+                <td>Collinsview</td>
+                <td>(631)281-7284x44432</td>
+            </tr>
+
+            <tr>
+                <td>Alicia Morse</td>
+                <td>New Calvin</td>
+                <td>+1-659-762-9028x47283</td>
+            </tr>
+
+            <tr>
+                <td>Samantha Daniels</td>
+                <td>Hardyport</td>
+                <td>+1-936-912-9960x1668</td>
+            </tr>
+
+            <tr>
+                <td>Tara Christensen</td>
+                <td>Carlaton</td>
+                <td>598-217-8263</td>
+            </tr>
+
+            <tr>
+                <td>Natalie Smith</td>
+                <td>Schroederhaven</td>
+                <td>001-704-315-8807x808</td>
+            </tr>
+
+            <tr>
+                <td>Tiffany Salazar</td>
+                <td>Jessicabury</td>
+                <td>9596883387</td>
+            </tr>
+
+            <tr>
+                <td>Molly Sampson</td>
+                <td>Lake Tyler</td>
+                <td>866.907.5775x812</td>
+            </tr>
+
+            <tr>
+                <td>Pamela Carter</td>
+                <td>South Deborah</td>
+                <td>001-482-464-3894</td>
+            </tr>
+
+            <tr>
+                <td>Daniel Flores</td>
+                <td>North Shannon</td>
+                <td>(551)875-3037</td>
+            </tr>
+
+            <tr>
+                <td>Kim Calderon</td>
+                <td>New Stephanieview</td>
+                <td>001-642-575-7941x8412</td>
+            </tr>
+
+            <tr>
+                <td>Jonathan Vega</td>
+                <td>Franklinton</td>
+                <td>+1-251-682-2222x23625</td>
+            </tr>
+
+            <tr>
+                <td>James Johnson</td>
+                <td>East Julie</td>
+                <td>(393)275-2749x745</td>
+            </tr>
+
+            <tr>
+                <td>Courtney Michael</td>
+                <td>Longstad</td>
+                <td>(688)290-1775x3099</td>
+            </tr>
+
+            <tr>
+                <td>Jessica Maddox</td>
+                <td>Port Sarah</td>
+                <td>(925)996-0455x95165</td>
+            </tr>
+
+            <tr>
+                <td>Craig Nichols</td>
+                <td>Jackstad</td>
+                <td>294.463.6568x07637</td>
+            </tr>
+
+            <tr>
+                <td>Martha Hoover</td>
+                <td>Garyberg</td>
+                <td>(713)503-1403x4841</td>
+            </tr>
+
+            <tr>
+                <td>Tina Fisher</td>
+                <td>Cohenfort</td>
+                <td>+1-544-552-6577x6211</td>
+            </tr>
+
+            <tr>
+                <td>Tracy Larson</td>
+                <td>Trujilloland</td>
+                <td>561.546.3387</td>
+            </tr>
+
+            <tr>
+                <td>Sabrina Norman</td>
+                <td>Stacychester</td>
+                <td>467.768.8229x078</td>
+            </tr>
+
+            <tr>
+                <td>Vincent Paul</td>
+                <td>Michellefort</td>
+                <td>(873)770-9164x036</td>
+            </tr>
+
+            <tr>
+                <td>Jeremy Ray</td>
+                <td>Timothyberg</td>
+                <td>9813296651</td>
+            </tr>
+
+            <tr>
+                <td>Michael Harmon</td>
+                <td>South Michellechester</td>
+                <td>001-608-781-6732x89844</td>
+            </tr>
+
+            <tr>
+                <td>Andrew Cooper</td>
+                <td>Bennettmouth</td>
+                <td>+1-215-380-7541x404</td>
+            </tr>
+
+            <tr>
+                <td>Joseph Jordan</td>
+                <td>West Walterstad</td>
+                <td>686-630-4419</td>
+            </tr>
+
+            <tr>
+                <td>Brenda Rubio</td>
+                <td>New Sheila</td>
+                <td>9202655181</td>
+            </tr>
+
+            <tr>
+                <td>Ethan Benson</td>
+                <td>North Oliviaberg</td>
+                <td>6908070644</td>
+            </tr>
+
+            <tr>
+                <td>Ashley Gardner</td>
+                <td>Paulview</td>
+                <td>(753)695-9105</td>
+            </tr>
+
+            <tr>
+                <td>Mary Salazar</td>
+                <td>Port Justinstad</td>
+                <td>(676)806-5347x51160</td>
+            </tr>
+
+            <tr>
+                <td>Jason Allen</td>
+                <td>West Daniel</td>
+                <td>(924)904-6286x36208</td>
+            </tr>
+
+            <tr>
+                <td>Nathan Lopez</td>
+                <td>Butlerhaven</td>
+                <td>2126260980</td>
+            </tr>
+
+            <tr>
+                <td>Robert Clarke</td>
+                <td>Carrstad</td>
+                <td>+1-245-617-9433</td>
+            </tr>
+
+            <tr>
+                <td>Rebecca Ware</td>
+                <td>Nathanchester</td>
+                <td>+1-316-353-8051x17756</td>
+            </tr>
+
+            <tr>
+                <td>Michael Patel</td>
+                <td>West Nicoleborough</td>
+                <td>+1-424-449-1316</td>
+            </tr>
+
+            <tr>
+                <td>Teresa Taylor</td>
+                <td>New Paulhaven</td>
+                <td>260.486.2046</td>
+            </tr>
+
+            <tr>
+                <td>Robert Thomas</td>
+                <td>Maymouth</td>
+                <td>705-394-9983</td>
+            </tr>
+
+            <tr>
+                <td>Bethany Johnson</td>
+                <td>Peckchester</td>
+                <td>541-910-0269</td>
+            </tr>
+
+            <tr>
+                <td>Leslie Bishop</td>
+                <td>West Jasonmouth</td>
+                <td>(286)431-1480x83171</td>
+            </tr>
+
+            <tr>
+                <td>Christopher Robertson</td>
+                <td>Howardville</td>
+                <td>416-312-5117x194</td>
+            </tr>
+
+            <tr>
+                <td>Jasmine Bryan</td>
+                <td>Lindsaybury</td>
+                <td>596.876.5580x3343</td>
+            </tr>
+
+            <tr>
+                <td>Ronald Carlson</td>
+                <td>Alexandermouth</td>
+                <td>2869033178</td>
+            </tr>
+
+            <tr>
+                <td>Stephanie Crosby</td>
+                <td>Whitetown</td>
+                <td>7329351691</td>
+            </tr>
+
+            <tr>
+                <td>Chris Burch</td>
+                <td>Woodsborough</td>
+                <td>942.848.5300</td>
+            </tr>
+
+            <tr>
+                <td>Andrea Perez</td>
+                <td>Wilsonland</td>
+                <td>469-511-2270x21749</td>
+            </tr>
+
+            <tr>
+                <td>Maria Gray</td>
+                <td>East Vincenttown</td>
+                <td>(335)997-8985x602</td>
+            </tr>
+
+            <tr>
+                <td>Daniel Garcia</td>
+                <td>South Sherriville</td>
+                <td>+1-766-508-1136x9943</td>
+            </tr>
+
+            <tr>
+                <td>Jonathan Williams</td>
+                <td>East Travis</td>
+                <td>354-519-2597x36065</td>
+            </tr>
+
+            <tr>
+                <td>Thomas Rodriguez</td>
+                <td>North Amber</td>
+                <td>3672513872</td>
+            </tr>
+
+            <tr>
+                <td>Melissa Miller</td>
+                <td>Ronaldmouth</td>
+                <td>322-592-9483</td>
+            </tr>
+
+            <tr>
+                <td>Sylvia Jackson</td>
+                <td>East Norma</td>
+                <td>+1-470-572-5164x978</td>
+            </tr>
+
+            <tr>
+                <td>James Adams</td>
+                <td>North Ericborough</td>
+                <td>540-341-3438x4921</td>
+            </tr>
+
+            <tr>
+                <td>Heather Harrell</td>
+                <td>West Julieport</td>
+                <td>532.730.7140x39788</td>
+            </tr>
+
+            <tr>
+                <td>Geoffrey Thompson</td>
+                <td>Josephside</td>
+                <td>001-774-598-6704x991</td>
+            </tr>
+
+            <tr>
+                <td>Justin Thomas</td>
+                <td>Port Davidtown</td>
+                <td>001-223-368-0858x6064</td>
+            </tr>
+
+            <tr>
+                <td>Samantha Bowman DVM</td>
+                <td>East Nichole</td>
+                <td>+1-292-868-7548</td>
+            </tr>
+
+            <tr>
+                <td>Deborah Ferguson</td>
+                <td>Raychester</td>
+                <td>2103489465</td>
+            </tr>
+
+            <tr>
+                <td>Brittany Clark</td>
+                <td>Carlsonborough</td>
+                <td>(977)309-8574</td>
+            </tr>
+
+            <tr>
+                <td>Kristina Jones</td>
+                <td>North Sergiotown</td>
+                <td>001-269-559-4504</td>
+            </tr>
+
+            <tr>
+                <td>Carlos Horton</td>
+                <td>East Tasha</td>
+                <td>9183450315</td>
+            </tr>
+
+            <tr>
+                <td>Clifford Moore</td>
+                <td>South Jacob</td>
+                <td>+1-301-714-2843x9543</td>
+            </tr>
+
+            <tr>
+                <td>Lisa Collins</td>
+                <td>Patelshire</td>
+                <td>730.623.0005</td>
+            </tr>
+
+            <tr>
+                <td>Richard Ayala</td>
+                <td>Lynchside</td>
+                <td>979-450-8463x826</td>
+            </tr>
+
+            <tr>
+                <td>Christopher Harris</td>
+                <td>Anthonyville</td>
+                <td>001-459-945-7932x428</td>
+            </tr>
+
+            <tr>
+                <td>Mark Parker</td>
+                <td>Millerchester</td>
+                <td>+1-888-921-1127x1111</td>
+            </tr>
+
+            <tr>
+                <td>Crystal Odom</td>
+                <td>Tammieville</td>
+                <td>279-399-8879</td>
+            </tr>
+
+            <tr>
+                <td>John Horne</td>
+                <td>Lake Matthewfurt</td>
+                <td>536.702.7651x908</td>
+            </tr>
+
+            <tr>
+                <td>Jonathan Lambert</td>
+                <td>Scottside</td>
+                <td>+1-802-380-8131</td>
+            </tr>
+
+            <tr>
+                <td>Stacy Huynh</td>
+                <td>Wellsview</td>
+                <td>796.725.2536</td>
+            </tr>
+
+            <tr>
+                <td>Martin Sanchez</td>
+                <td>Hallshire</td>
+                <td>918-896-3370x16111</td>
+            </tr>
+
+            <tr>
+                <td>Cody Phillips</td>
+                <td>North Sabrina</td>
+                <td>6348510749</td>
+            </tr>
+
+            <tr>
+                <td>Desiree Anderson</td>
+                <td>Lopezport</td>
+                <td>477-644-9152x7370</td>
+            </tr>
+
+            <tr>
+                <td>Douglas Mcpherson</td>
+                <td>South Susanport</td>
+                <td>(376)229-8638x6630</td>
+            </tr>
+
+            <tr>
+                <td>Angelica Crosby</td>
+                <td>South Robert</td>
+                <td>+1-432-402-3670</td>
+            </tr>
+
+            <tr>
+                <td>Kenneth Martinez</td>
+                <td>East Megan</td>
+                <td>838-679-3525</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script>
+        // JavaScript for filtering table rows based on user input
+        document.getElementById("search").addEventListener("keyup", function () {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            table = document.querySelector("table");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; // Assuming the name is in the first column
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
